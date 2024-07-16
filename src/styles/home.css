@@ -6,5 +6,29 @@
 }
 
 .w-30  {
-    width: 30vw;
+    width: 90vw;
+}
+
+.mt {
+    margin-top: 15rem;
+}
+
+@media screen and (min-width: 801px) {
+    .w-30  {
+        width: 60vw;
+    }
+
+    .mt {
+        margin-top: 15rem;
+    }
+}
+
+@media screen and (min-width: 1501px) {
+    .w-30  {
+        width: 30vw;
+    }
+
+    .mt {
+        margin-top: 15rem;
+    }
 }
