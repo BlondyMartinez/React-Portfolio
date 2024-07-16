@@ -5,18 +5,25 @@ import bump from '../img/moon_normals.png';
 
 const ThreeScene = () => {
     const sceneRef = useRef(null);
-    let model, camera, scene, renderer, light, composer;
+    const modelRef = useRef(null);
+    const cameraRef = useRef(null);
+    const sceneRef3D = useRef(null);
+    const rendererRef = useRef(null);
+    const lightRef = useRef(null);
 
     useEffect(() => {
         const init = () => {
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             camera.position.z = 1.5;
             camera.position.y = 0.4;
+            cameraRef.current = camera;
 
-            scene = new THREE.Scene();
+            const scene = new THREE.Scene();
+            sceneRef3D.current = scene;
 
-            light = new THREE.PointLight(0xfff2d2, 50);
+            const light = new THREE.PointLight(0xfff2d2, 50);
             scene.add(light);
+            lightRef.current = light;
             
             const textureLoader = new THREE.TextureLoader();
 
@@ -31,70 +38,88 @@ const ThreeScene = () => {
             });
 
             const geometry = new THREE.SphereGeometry(1, 128, 128);
-            model = new THREE.Mesh(geometry, material);
+            const model = new THREE.Mesh(geometry, material);
             scene.add(model);
+            modelRef.current = model;
 
-            renderer = new THREE.WebGLRenderer({ antialias: true });
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setPixelRatio(window.devicePixelRatio * 2);
-            sceneRef.current.appendChild(renderer.domElement);
+            rendererRef.current = renderer;
+
+            if (sceneRef.current) {
+                sceneRef.current.appendChild(renderer.domElement);
+            }
 
             window.addEventListener('resize', handleResize);
-            handleResize();
-
             document.addEventListener('mousemove', onMouseMove);
 
             animate();
         };
 
         const handleResize = () => {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            renderer.setSize(width, height);
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
+            if (rendererRef.current && cameraRef.current) {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                rendererRef.current.setSize(width, height);
+                cameraRef.current.aspect = width / height;
+                cameraRef.current.updateProjectionMatrix();
+            }
         };
 
         const animate = () => {
+            if (!rendererRef.current || !sceneRef3D.current || !cameraRef.current) return;
+
             requestAnimationFrame(animate);
 
-            if (model) {
-                model.rotation.y += 0.0001; 
-                model.rotation.x += 0.0001; 
+            if (modelRef.current) {
+                modelRef.current.rotation.y += 0.0001; 
+                modelRef.current.rotation.x += 0.0001; 
             }
 
-            if (renderer) {
-                renderer.render(scene, camera);
-            }
+            rendererRef.current.render(sceneRef3D.current, cameraRef.current);
         };
+
         const onMouseMove = (event) => {
-            if (!model) return;
+            if (!modelRef.current || !cameraRef.current || !lightRef.current) return;
         
             const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
             const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
         
             const vector = new THREE.Vector3(mouseX, mouseY, 0.5);
-            vector.unproject(camera);
+            vector.unproject(cameraRef.current);
         
-            const dir = vector.sub(camera.position).normalize();
-            const distance = -camera.position.z / dir.z;
+            const dir = vector.sub(cameraRef.current.position).normalize();
+            const distance = -cameraRef.current.position.z / dir.z;
         
-            const pos = camera.position.clone().add(dir.multiplyScalar(distance));
+            const pos = cameraRef.current.position.clone().add(dir.multiplyScalar(distance));
             const center = new THREE.Vector3(0, 0, 0);
         
             const z = 4 - Math.abs(mouseX * 2);
         
             const sphereIntersection = center.clone().add(pos.sub(center).normalize().multiplyScalar(z));
         
-            light.position.copy(sphereIntersection);
+            lightRef.current.position.copy(sphereIntersection);
         };
 
         init();
 
         return () => {
-            document.removeEventListener('mousemove', onMouseMove);
-            sceneRef.current.removeChild(renderer.domElement);
-            renderer.dispose();
+            if (rendererRef.current) {
+                document.removeEventListener('mousemove', onMouseMove);
+                window.removeEventListener('resize', handleResize);
+
+                if (sceneRef.current) {
+                    sceneRef.current.removeChild(rendererRef.current.domElement);
+                }
+
+                rendererRef.current.dispose();
+
+                if (modelRef.current) {
+                    modelRef.current.geometry.dispose();
+                    modelRef.current.material.dispose();
+                }
+            }
         };
     }, []);
 
