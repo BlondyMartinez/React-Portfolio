@@ -2,14 +2,24 @@ import React from 'react';
 import ThreeScene from '../scene';
 import "../../styles/home.css"
 import title from "../../img/title.png"
-import pic from "../../img/pic.png"
+import FancyButton from '../components/button.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+
     return (
-        <div>
+        <div className='mt-0'>
             <ThreeScene />
-            <div className='content bg-transparent d-flex align-items-center justify-content-center mt-5'>
-                <img src={title} className='w-30'></img>
+            <div className='content bg-transparent d-flex flex-column align-items-center justify-content-center mt-5'>
+                <img src={title} className='w-30 mb-4'></img>
+                <div className='d-flex justify-content-between w-30'>
+                  <FancyButton icon={'mingcute:code-line'} text={'Projects'} handleClick={() => navigate('/projects')}/>
+                  <div className='d-flex gap-2'>
+                    <FancyButton icon={'mingcute:github-line'} handleClick={() => window.open('https://github.com/BlondyMartinez', '_blank')}></FancyButton>
+                    <FancyButton icon={'ri:linkedin-line'} handleClick={() => window.open('https://www.linkedin.com/in/blondy-martinez/', '_blank')}></FancyButton>
+                  </div>
+                </div>
             </div>
         </div>
     );
