@@ -2,7 +2,7 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    height: calc(100vh - 56px);
+    height: calc(100vh - 56px);  
 }
 
 .w-30  {
@@ -10,7 +10,11 @@
 }
 
 .mt {
-    margin-top: 15rem;
+    margin-top: 6rem;
+}
+
+.svg {
+    width: 4rem;
 }
 
 @media screen and (min-width: 801px) {
@@ -19,7 +23,7 @@
     }
 
     .mt {
-        margin-top: 15rem;
+        margin-top: 10rem;
     }
 }
 
@@ -29,6 +33,6 @@
     }
 
     .mt {
-        margin-top: 15rem;
+        margin-top: 12rem;
     }
 }
