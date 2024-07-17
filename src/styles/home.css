@@ -1,25 +1,49 @@
-.content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: calc(100vh - 56px);  
-}
-
 .w-30  {
-    width: 90vw;
+    width: 85vw;
 }
 
 .mt {
-    margin-top: 6rem;
+    margin-top: 15rem;
 }
 
 .svg {
     width: 4rem;
 }
 
+@media screen and (max-width: 800px) and (min-height: 700px)  {
+    .w-30  {
+        width: 85vw;
+    }
+
+    .mt {
+        margin-top: 20rem;
+    }
+}
+
 @media screen and (min-width: 801px) {
     .w-30  {
-        width: 60vw;
+        width: 80vw;
+    }
+
+    .mt {
+        margin-top: 30rem;
+    }
+}
+
+@media screen and (min-width: 1023px) and (min-height: 1023px){
+    .w-30  {
+        width: 80vw;
+    }
+
+    .mt {
+        margin-top: 35rem;
+    }
+}
+
+
+@media screen and (min-width: 1023px) and (max-height: 1022px){
+    .w-30  {
+        width: 40vw;
     }
 
     .mt {
@@ -27,12 +51,23 @@
     }
 }
 
-@media screen and (min-width: 1501px) {
+
+@media screen and (min-width: 1201px) {
     .w-30  {
-        width: 30vw;
+        width: 35vw;
     }
 
     .mt {
-        margin-top: 12rem;
+        margin-top: 20rem;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .w-30  {
+        width: 35vw;
+    }
+
+    .mt {
+        margin-top: 33rem;
     }
 }
