@@ -6,3 +6,7 @@
     font-weight: bold;
     transform: scale(1.1);
 }
+
+.bg-body-tertiary {
+    background-color: transparent !important;
+}
