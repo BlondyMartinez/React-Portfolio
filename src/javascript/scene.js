@@ -22,6 +22,7 @@ const ThreeScene = () => {
             sceneRef3D.current = scene;
 
             const light = new THREE.PointLight(0xfff2d2, 50);
+            light.position.set(0, 4, 1);
             scene.add(light);
             lightRef.current = light;
             
@@ -44,7 +45,7 @@ const ThreeScene = () => {
 
             const renderer = new THREE.WebGLRenderer({ antialias: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(window.devicePixelRatio * 2);
+            renderer.setPixelRatio(window.devicePixelRatio);
             rendererRef.current = renderer;
 
             if (sceneRef.current) {
