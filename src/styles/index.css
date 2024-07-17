@@ -17,3 +17,13 @@ code {
   background-color: transparent !important;
 }
 
+.mt-nav {
+  margin-top: 56px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: calc(100vh - 56px);  
+}

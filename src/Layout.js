@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PortofolioNavbar from './javascript/components/navbar';
 import Home from './javascript/views/home';
 import Experience from './javascript/views/experience';
+import ThreeScene from './javascript/scene';
+import About from './javascript/views/about';
 import React from 'react';
 
 const Layout = () => { 
@@ -9,9 +11,13 @@ const Layout = () => {
         <>
             <BrowserRouter>
                 <PortofolioNavbar />
-                <Routes>
-                    <Route element={<Home />} path="/" />
-                </Routes>
+                <ThreeScene></ThreeScene>
+                <div className='content bg-transparent mt-nav'>
+                    <Routes>
+                        <Route element={<Home />} path="/" />
+                        <Route element={<About />} path="/about" />
+                    </Routes>
+                </div>
             </BrowserRouter>
         </>
     );
