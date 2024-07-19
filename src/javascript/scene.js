@@ -21,7 +21,7 @@ const ThreeScene = () => {
             const scene = new THREE.Scene();
             sceneRef3D.current = scene;
 
-            const light = new THREE.PointLight(0xfff2d2, 50);
+            const light = new THREE.PointLight(0xfff2d2, 100);
             light.position.set(0, 4, 1);
             scene.add(light);
             lightRef.current = light;
