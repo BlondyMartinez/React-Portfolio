@@ -1,5 +1,4 @@
 import React from 'react';
-import ThreeScene from '../scene';
 import "../../styles/home.css"
 import title from "../../img/title.png"
 import FancyButton from '../components/button.jsx';
