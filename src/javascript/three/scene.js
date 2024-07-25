@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import diffuse from '../img/moon.png';
-import bump from '../img/moon_normals.png';
+import diffuse from '../../img/moon.png';
+import bump from '../../img/moon_normals.png';
 
 const ThreeScene = () => {
     const sceneRef = useRef(null);

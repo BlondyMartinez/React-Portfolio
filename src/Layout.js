@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PortofolioNavbar from './javascript/components/navbar';
 import Home from './javascript/views/home';
 import Experience from './javascript/views/experience';
-import ThreeScene from './javascript/scene';
+import ThreeScene from './javascript/three/scene';
 import About from './javascript/views/about';
 import React from 'react';
 
