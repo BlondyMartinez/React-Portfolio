@@ -21,7 +21,7 @@ const ThreeScene = () => {
             const scene = new THREE.Scene();
             sceneRef3D.current = scene;
 
-            const light = new THREE.PointLight(0xfff2d2, 100);
+            const light = new THREE.PointLight(0xfff2d2, 70);
             light.position.set(0, 4, 1);
             scene.add(light);
             lightRef.current = light;
@@ -41,6 +41,18 @@ const ThreeScene = () => {
             const geometry = new THREE.SphereGeometry(1, 128, 128);
             const model = new THREE.Mesh(geometry, material);
             scene.add(model);
+
+            const initialQuaternion = new THREE.Quaternion();
+            const rotation = new THREE.Euler(
+                0,  
+                0,
+                THREE.MathUtils.degToRad(-45),
+                'XYZ'
+            );
+
+            initialQuaternion.setFromEuler(rotation);
+            model.quaternion.copy(initialQuaternion);
+
             modelRef.current = model;
 
             const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -74,8 +86,10 @@ const ThreeScene = () => {
             requestAnimationFrame(animate);
 
             if (modelRef.current) {
-                modelRef.current.rotation.y += 0.0001; 
-                modelRef.current.rotation.x += 0.0001; 
+                const deltaRotation = new THREE.Quaternion();
+                const rotationSpeed = 0.00025;
+                deltaRotation.setFromEuler(new THREE.Euler(rotationSpeed, rotationSpeed, 0, 'XYZ'));
+                modelRef.current.quaternion.multiplyQuaternions(deltaRotation, modelRef.current.quaternion);
             }
 
             rendererRef.current.render(sceneRef3D.current, cameraRef.current);
