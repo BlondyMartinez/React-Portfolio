@@ -6,8 +6,8 @@
     margin-top: 15rem;
 }
 
-.svg {
-    width: 4rem;
+.title {
+    opacity: 80%;
 }
 
 @media screen and (max-width: 800px) and (min-height: 700px)  {
