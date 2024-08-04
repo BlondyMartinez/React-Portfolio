@@ -19,7 +19,8 @@ const SkillCategory = ({ category, skills }) => {
         sqla: "SQLAlchemy",
         unity: "Unity",
         ue: "Unreal Engine",
-        react: "React"
+        react: "React",
+        postgresql: 'PostgreSQL',
     };
 
     return (

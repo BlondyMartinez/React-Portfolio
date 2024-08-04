@@ -15,6 +15,7 @@ import { ReactComponent as SQLA } from '../../svg/SQLAlchemy.svg';
 import { ReactComponent as UNITY } from '../../svg/Unity.svg';
 import { ReactComponent as UE } from '../../svg/Unreal Engine.svg';
 import { ReactComponent as REACT } from '../../svg/react-2.svg';
+import { ReactComponent as POSTGRESQL } from '../../svg/postgresql-svgrepo-com.svg';
 
 import "../../styles/skill.css"
 
@@ -35,7 +36,8 @@ const SVGIcon = ({ iconName }) => {
         sqla: SQLA,
         unity: UNITY,
         ue: UE,
-        react: REACT
+        react: REACT,
+        postgresql: POSTGRESQL,
     };
     
     const IconComponent = svgMap[iconName];

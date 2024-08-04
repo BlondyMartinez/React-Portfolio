@@ -23,7 +23,7 @@ function About() {
                 <div className="card d-flex">
                     <div className="row">
                         <SkillCategory category="Frontend" skills={['html', 'css', 'js', 'react']} />
-                        <SkillCategory category="Backend" skills={['py', 'ruby', 'flask', 'sqla']} />
+                        <SkillCategory category="Backend" skills={['py', 'ruby', 'flask', 'sqla', 'postgresql']} />
                         <SkillCategory category="Testing" skills={['rspec', 'jest']} />
                         <SkillCategory category="Other" skills={['cpp', 'ue', 'cs', 'unity', 'ps', 'git']} />
                     </div>
