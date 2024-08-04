@@ -8,13 +8,14 @@
 }
 
 .about-content {
-    width: 40vw;
-    margin-left: 27%;
+    width: 45vw;
+    height: 100%;
+    margin-left: 35%;
 }
 
 
 .card {
-    background-color: rgba(0, 44, 58, 0.65);
+    background-color: rgba(0, 0, 0, 0.5);
     border: none;
 }
 
@@ -24,5 +25,12 @@ span {
 
 .orange-text {
     color: #e98531;
+}
+
+.light-blue-text {
+    color:  rgb(160, 233, 255);;
+}
+
+.fw-800 {
     font-weight: 800;
 }
