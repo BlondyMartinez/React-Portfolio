@@ -8,7 +8,7 @@ import { ReactComponent as CSS } from '../../svg/css-3.svg';
 import { ReactComponent as HTML } from '../../svg/html-1.svg';
 import { ReactComponent as GIT } from '../../svg/git-icon.svg';
 import { ReactComponent as FLASK } from '../../svg/flask.svg';
-import { ReactComponent as JEST } from '../../svg/jest-2.svg';
+import { ReactComponent as JEST } from '../../svg/Jest.svg';
 import { ReactComponent as PS } from '../../svg/photoshop-cc-4.svg';
 import { ReactComponent as RSPEC } from '../../svg/RSpec.svg';
 import { ReactComponent as SQLA } from '../../svg/SQLAlchemy.svg';
