@@ -1,0 +1,28 @@
+.about-container {
+    position: relative; 
+    max-height: calc(100vh - 56px);
+    height: calc(100vh - 56px);
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about-content {
+    width: 40vw;
+    margin-left: 27%;
+}
+
+
+.card {
+    background-color: rgba(0, 44, 58, 0.65);
+    border: none;
+}
+
+span {
+    font-size: 1.5rem;
+}
+
+.orange-text {
+    color: #e98531;
+    font-weight: 800;
+}
