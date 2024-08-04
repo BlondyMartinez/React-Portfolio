@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <div className='d-flex flex-column align-items-center justify-content-center mt'>
-            <img src={title} className='w-30 mb-3 title'></img>
+            <img src={title} className='w-30 mb-3 opacity-80'></img>
             <div className='d-flex justify-content-between w-30'>
                 <FancyButton icon={'mingcute:code-line'} text={'Discover My Projects'} handleClick={() => navigate('/projects')}/>
                    <div className='d-flex gap-2'>
