@@ -1,10 +1,11 @@
 .astronaut-container {
-    position: relative; 
+    position: absolute; 
     max-height: calc(100vh - 56px);
     height: calc(100vh - 56px);
+    width: 100%;
     overflow: hidden;
     z-index: 1;
-  }
+}
   
 .astronaut-container img {
     position: absolute; 
