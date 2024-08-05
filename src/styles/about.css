@@ -1,6 +1,6 @@
 .about-container {
     position: relative; 
-    height: calc(100vh - 56px);
+    height: calc(100vh - 94.75px);
     width: 100vw;
     max-width: 100vw;
     z-index: 1;
@@ -67,7 +67,7 @@ span {
 
 @media screen and (min-width: 1281px) {
     .about-content {
-        margin-top: 7.5%;
+        margin-top: 5%;
         width: 45vw;
         margin-left: 35%;
     }
