@@ -10,3 +10,8 @@
 .bg-body-tertiary {
     background-color: transparent !important;
 }
+
+.brand-size {
+    width: 5rem;
+    height: auto;
+}

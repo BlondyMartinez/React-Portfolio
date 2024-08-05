@@ -4,12 +4,20 @@ import Nav from 'react-bootstrap/Nav';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/navbar.css';
+import brand from '../../img/home.png'
 
 const PortofolioNavbar = () => {
     return (
         <>
             <Navbar collapseOnSelect expand='lg' variant="dark" className="bg-body-tertiary fixed-top bg-transparent">
                 <Container fluid>
+                    <Navbar.Brand as={Link} to="/" className='d-flex align-items-center'>
+                        <img src={brand} className='brand-size ps-3'></img>
+                        <div className='ps-2 d-flex flex-column justify-content-center'>
+                            <h5 className='fw-light m-0'>Blondy Martínez</h5>
+                            <h6 className='fw-light m-0'>Full Stack Developer</h6>
+                        </div>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="ms-auto" />
                     <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
                         <Nav>
