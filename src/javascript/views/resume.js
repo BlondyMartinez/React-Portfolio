@@ -89,9 +89,9 @@ const Resume = () => {
     ]
 
     return (
-        <div className='h-100 d-flex flex-column justify-content-center align-items-center'>
+        <div className='h-100 d-flex flex-column justify-content-between align-items-center'>
             <div className='mt-5'>
-                <a className="button d-inline-flex align-items-center gap-2 text-decoration-none mt-5" href="https://raw.githubusercontent.com/BlondyMartinez/React-Portfolio/master/src/pdf/Resume_BlondyMartinez.pdf" download>
+                <a className="button d-inline-flex align-items-center gap-2 text-decoration-none" href="https://raw.githubusercontent.com/BlondyMartinez/React-Portfolio/master/src/pdf/Resume_BlondyMartinez.pdf" download>
                     <Icon className='fs-3' icon='material-symbols-light:download' /> Download Resume
                 </a>
             </div>
@@ -101,6 +101,10 @@ const Resume = () => {
                 <Timeline title="Non-Tech Experience" items={nonTech} />
                 <Timeline title="Education" items={education} />
             </div>
+
+            <h6 className='orange-text'>*For extended work history check  
+                <a href="https://www.linkedin.com/in/blondy-martinez/" target="_blank" className='text-decoration-none light-blue-text'> LinkedIn</a>.
+            </h6>
         </div>
     );
 };
