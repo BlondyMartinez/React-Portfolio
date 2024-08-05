@@ -1,12 +1,12 @@
 .astronaut-container {
-    position: absolute; 
+    position: fixed; 
     height: calc(100vh - 56px);
     width: 100%;
     z-index: 1;
 }
   
 .astronaut-container img {
-    position: absolute; 
+    position: relative; 
     top: -5%;
     left: -30%;
     animation: float 5s ease-in-out infinite;
