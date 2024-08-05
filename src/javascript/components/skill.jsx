@@ -24,7 +24,7 @@ const SkillCategory = ({ category, skills }) => {
     };
 
     return (
-        <div className="skill-category col-3">
+        <div className="skill-category col-12 col-md-6 col-lg-3">
             <h1 className="category-title orange-text mt-2">{category}</h1>
             <ul className="skill-list">
                 {skills.map(skill => (

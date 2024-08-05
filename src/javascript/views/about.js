@@ -20,7 +20,7 @@ function About() {
 
                 
                 <h1 className="orange-text fw-800 mt-3">Skills</h1>
-                <div className="card d-flex">
+                <div className="card">
                     <div className="row">
                         <SkillCategory category="Frontend" skills={['html', 'css', 'js', 'react']} />
                         <SkillCategory category="Backend" skills={['py', 'ruby', 'flask', 'sqla', 'postgresql']} />
