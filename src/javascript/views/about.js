@@ -8,7 +8,7 @@ function About() {
         <div className="about-container d-flex justify-content-center align-items-center">
             <Astronaut></Astronaut>
 
-            <div className="about-content d-flex flex-column justify-content-end mb-5">
+            <div className="about-content d-flex flex-column justify-content-end">
                 <h1 className="light-blue-text fw-800 glow">About Me</h1>
                 <div className="card">
                     <span className="p-3 text-white">Hello! I'm a <span className="orange-text fw-800">versatile</span> full-stack developer with a background in <span className="orange-text fw-800">computer games programming</span>. 
