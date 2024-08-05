@@ -9,7 +9,7 @@ function About() {
             <Astronaut></Astronaut>
 
             <div className="about-content d-flex flex-column justify-content-end mb-5">
-                <h1 className="orange-text fw-800">About Me</h1>
+                <h1 className="light-blue-text fw-800 glow">About Me</h1>
                 <div className="card">
                     <span className="p-3 text-white">Hello! I'm a <span className="orange-text fw-800">versatile</span> full-stack developer with a background in <span className="orange-text fw-800">computer games programming</span>. 
                         Proficient in both <span className="orange-text fw-800">front-end</span> and <span className="orange-text fw-800">back-end</span> development, I also have experience in <span className="orange-text fw-800">testing</span> and design software. 
@@ -19,7 +19,7 @@ function About() {
                 </div>
 
                 
-                <h1 className="orange-text fw-800 mt-3">Skills</h1>
+                <h1 className="light-blue-text fw-800 mt-3 glow">Skills</h1>
                 <div className="card">
                     <div className="row">
                         <SkillCategory category="Frontend" skills={['html', 'css', 'js', 'react', 'bootstrap']} />
