@@ -11,7 +11,7 @@ const Layout = () => {
             <BrowserRouter>
                 <PortofolioNavbar />
                 <ThreeScene></ThreeScene>
-                <div className='content bg-transparent mt-nav p-0'>
+                <div className='content max-height bg-transparent mt-nav p-0'>
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<About />} path="/about" />

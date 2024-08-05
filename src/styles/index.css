@@ -33,7 +33,9 @@ code {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: calc(100vh - 56px);  
-  max-height: calc(100vh - 56px);
-  overflow: hidden;
+}
+
+.max-height {
+  height: calc(100vh - 94.75px);  
+  max-height: calc(100vh - 94.75px);
 }
