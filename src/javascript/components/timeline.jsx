@@ -3,7 +3,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../../styles/timeline.css';
 
 const Timeline = ({ title, items }) => {
-    console.log(items)
     return (
         <Container className="timeline-container col-sm-10 col-md-10 col-lg-4 mt-2">
             <div className='p-3 card text-white'>
