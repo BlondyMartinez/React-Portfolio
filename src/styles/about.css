@@ -8,12 +8,16 @@
 
 .about-content {
     width: 80vw;
-    margin-left: 0%;    
+    margin-left: 0%;
+    margin-top: 45%;    
     overflow-y: auto; 
     overflow-x: hidden;
     z-index: 2;
-    margin-bottom: 0%;
     position: relative;
+}
+
+.about-content::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
@@ -32,7 +36,13 @@ span {
 .fw-800 {
     font-weight: 800;
 }
-  
+
+@media screen and (min-height: 700px) and (max-width: 801px) {
+    .about-content {
+        margin-top: 53%;
+    }
+}
+
 @media screen and (min-width: 801px) {
     .about-content {
         width: 45vw;
@@ -44,6 +54,14 @@ span {
     .about-content {
         width: 80vw;
         margin-left: 0%;
+    }
+}
+
+@media screen and (min-width: 1023px) and (min-height: 599px){
+    .about-content {
+        margin-top: 10%;
+        width: 60vw;
+        margin-left: 35%;
     }
 }
 

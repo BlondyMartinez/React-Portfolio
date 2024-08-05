@@ -5,10 +5,10 @@ import SkillCategory from "../components/skill.jsx";
 
 function About() {
     return (
-        <div className="about-container d-flex justify-content-center align-items-center">
+        <div className="about-container d-flex justify-content-center">
             <Astronaut></Astronaut>
 
-            <div className="about-content d-flex flex-column justify-content-end">
+            <div className="about-content d-flex flex-column mb-3">
                 <h1 className="light-blue-text fw-800 glow">About Me</h1>
                 <div className="card">
                     <span className="p-3 text-white">Hello! I'm a <span className="orange-text fw-800">versatile</span> full-stack developer with a background in <span className="orange-text fw-800">computer games programming</span>. 
@@ -17,7 +17,6 @@ function About() {
                         I'm eager to use my skills to turn your ideas into reality!
                     </span>
                 </div>
-
                 
                 <h1 className="light-blue-text fw-800 mt-3 glow">Skills</h1>
                 <div className="card">

@@ -44,6 +44,14 @@
   }
 }
 
+@media screen and (min-width: 1023px) and (min-height: 599px){
+  .astronaut-container img {
+      top: 10%;
+      left: -5%;
+      width: 40rem;
+  }
+}
+
 @media screen and (min-width: 1201px) {
   .astronaut-container img {
       top: 15%;
