@@ -17,6 +17,10 @@ code {
   background-color: transparent !important;
 }
 
+.blur {
+  backdrop-filter: blur(10px);
+}
+
 .mt-nav {
   margin-top: 94.75px;
 }

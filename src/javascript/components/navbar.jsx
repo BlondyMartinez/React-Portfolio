@@ -9,7 +9,7 @@ import brand from '../../img/home.png'
 const PortofolioNavbar = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand='lg' variant="dark" className="bg-body-tertiary fixed-top bg-transparent">
+            <Navbar collapseOnSelect expand='lg' variant="dark" className="bg-body-tertiary fixed-top bg-transparent blur">
                 <Container fluid>
                     <Navbar.Brand as={Link} to="/" className='d-flex align-items-center'>
                         <img src={brand} className='brand-size ps-3'></img>
@@ -19,11 +19,11 @@ const PortofolioNavbar = () => {
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="ms-auto" />
-                    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+                    <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end blur p-3">
                         <Nav>
                             <Nav.Link as={Link} to="/about" className="text-white">About Me</Nav.Link>
                             <Nav.Link as={Link} to="/projects" className="text-white">Projects</Nav.Link>
-                            <Nav.Link as={Link} to="/experience" className="text-white">Experience</Nav.Link>
+                            <Nav.Link as={Link} to="/resume" className="text-white">Resume</Nav.Link>
                             <Nav.Link as={Link} to="/contact-me" className="text-white">Contact Me</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
