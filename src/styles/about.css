@@ -67,14 +67,14 @@ span {
 
 @media screen and (min-width: 1281px) {
     .about-content {
+        margin-top: 7.5%;
         width: 45vw;
         margin-left: 35%;
-        margin-bottom: 2rem;
     }
 }
 
 @media screen and (min-width: 1921px) {
     .about-content {
-        margin-bottom: 10%;
+        margin-top: 10%;
     }
 }
