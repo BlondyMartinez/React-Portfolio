@@ -21,6 +21,14 @@ code {
   margin-top: 56px;
 }
 
+.orange-text {
+  color: #e98531;
+}
+
+.light-blue-text {
+  color:  rgb(160, 233, 255);
+}
+
 .content {
   position: relative;
   z-index: 1;
