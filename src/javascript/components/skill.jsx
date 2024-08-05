@@ -21,6 +21,7 @@ const SkillCategory = ({ category, skills }) => {
         ue: "Unreal Engine",
         react: "React",
         postgresql: 'PostgreSQL',
+        bootstrap: 'Bootstrap',
     };
 
     return (

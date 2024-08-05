@@ -22,7 +22,7 @@ function About() {
                 <h1 className="orange-text fw-800 mt-3">Skills</h1>
                 <div className="card">
                     <div className="row">
-                        <SkillCategory category="Frontend" skills={['html', 'css', 'js', 'react']} />
+                        <SkillCategory category="Frontend" skills={['html', 'css', 'js', 'react', 'bootstrap']} />
                         <SkillCategory category="Backend" skills={['py', 'ruby', 'flask', 'sqla', 'postgresql']} />
                         <SkillCategory category="Testing" skills={['rspec', 'jest']} />
                         <SkillCategory category="Other" skills={['cpp', 'ue', 'cs', 'unity', 'ps', 'git']} />

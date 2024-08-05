@@ -16,6 +16,7 @@ import { ReactComponent as UNITY } from '../../svg/Unity.svg';
 import { ReactComponent as UE } from '../../svg/Unreal Engine.svg';
 import { ReactComponent as REACT } from '../../svg/react-2.svg';
 import { ReactComponent as POSTGRESQL } from '../../svg/postgresql-svgrepo-com.svg';
+import { ReactComponent as BOOTSTRAP } from '../../svg/bootstrap-4.svg';
 
 import "../../styles/skill.css"
 
@@ -38,6 +39,7 @@ const SVGIcon = ({ iconName }) => {
         ue: UE,
         react: REACT,
         postgresql: POSTGRESQL,
+        bootstrap: BOOTSTRAP,
     };
     
     const IconComponent = svgMap[iconName];
