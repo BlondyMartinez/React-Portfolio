@@ -14,8 +14,8 @@ const PortofolioNavbar = () => {
                     <Navbar.Brand as={Link} to="/" className='d-flex align-items-center'>
                         <img src={brand} className='brand-size ps-3'></img>
                         <div className='ps-2 d-flex flex-column justify-content-center'>
-                            <h5 className='fw-light m-0'>Blondy Martínez</h5>
-                            <h6 className='fw-light m-0'>Full Stack Developer</h6>
+                            <h5 className='fw-light m-0 light-blue-text'>Blondy Martínez</h5>
+                            <h6 className='fw-light m-0 orange-text'>Full Stack Developer</h6>
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="ms-auto" />
