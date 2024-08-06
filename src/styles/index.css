@@ -26,11 +26,11 @@ code {
 }
 
 .orange-text {
-  color: #e98531;
+  color: #e98531 !important;
 }
 
 .light-blue-text {
-  color:  rgb(160, 233, 255);
+  color:  rgb(160, 233, 255) !important;
 }
 
 .content {
