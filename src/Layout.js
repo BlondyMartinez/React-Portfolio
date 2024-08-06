@@ -5,6 +5,7 @@ import ThreeScene from './javascript/three/scene';
 import About from './javascript/views/about';
 import React from 'react';
 import Resume from './javascript/views/resume';
+import Projects from './javascript/views/projects';
 
 const Layout = () => { 
     return (
@@ -17,6 +18,7 @@ const Layout = () => {
                         <Route element={<Home />} path="/" />
                         <Route element={<About />} path="/about" />
                         <Route element={<Resume />} path="/resume" />
+                        <Route element={<Projects />} path="/projects" />
                     </Routes>
                 </div>
             </BrowserRouter>

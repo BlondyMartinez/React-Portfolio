@@ -1,0 +1,31 @@
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+}
+  
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    flex: 1;
+}
+  
+.video-container {
+    position: relative;
+    width: 100%; 
+    padding-top: 56.25%; 
+    background-color: black;
+}
+
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
