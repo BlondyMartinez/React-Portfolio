@@ -12,14 +12,12 @@ const ProjectCard = ({ title, techStack, significance, videoUrl, projectUrl, git
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
-            console.log('plays', videoRef)
             videoRef.current.play();
         }
     };
 
     const handleMouseLeave = () => {
         if (videoRef.current) {
-            console.log('pauses', videoRef)
             videoRef.current.pause();
         }
     };
