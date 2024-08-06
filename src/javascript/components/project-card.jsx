@@ -3,10 +3,12 @@ import { Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/project-card.css';
 import FancyButton from './button.jsx';
+import useScreenWidth from '../hooks/useScreenWidth.jsx';
 
 const ProjectCard = ({ title, techStack, significance, videoUrl, projectUrl, gitUrl, live }) => {
     const navigate = useNavigate();
     const videoRef = useRef(null);
+    const smallDevice = useScreenWidth();
 
     const handleMouseEnter = () => {
         if (videoRef.current) {
@@ -49,7 +51,7 @@ const ProjectCard = ({ title, techStack, significance, videoUrl, projectUrl, git
                         <Card.Text>{significance}</Card.Text>
                     </div>
                     <div className='d-flex justify-content-between mt-auto'>
-                        <FancyButton text='Read More' handleClick={() => navigate(projectUrl)} />
+                        <FancyButton text={smallDevice ? 'More' : 'Read More'} handleClick={() => navigate(projectUrl)} />
                         {live && <FancyButton text='Live' handleClick={() => window.open(live, '_blank')} />}
                         <FancyButton icon={'mingcute:github-line'} handleClick={() => window.open(gitUrl, '_blank')} />
                     </div>
