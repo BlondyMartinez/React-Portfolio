@@ -1,6 +1,5 @@
 import React from 'react';
 import ProjectCard from '../components/project-card';
-import useScreenWidth from '../hooks/useScreenWidth';
 
 const projects = [
     {
@@ -40,8 +39,6 @@ const projects = [
 ];
 
 const Projects = () => {
-    const smallDevice = useScreenWidth();
-    
     return (
         <div className="d-flex justify-content-center align-items-center min-height">
             <div className="row d-flex flex-wrap justify-content-around gx-5 gy-5 mx-2">
@@ -53,6 +50,7 @@ const Projects = () => {
                         significance={project.significance}
                         videoUrl={project.videoUrl}
                         projectUrl={project.projectUrl}
+                        gitUrl={project.gitUrl}
                         live={project.live}
                     />
                 ))}
