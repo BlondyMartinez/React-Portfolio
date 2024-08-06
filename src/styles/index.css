@@ -40,6 +40,14 @@ code {
 }
 
 .max-height {
-  height: calc(100vh - 94.75px);  
   max-height: calc(100vh - 94.75px);
+}
+
+.height {
+  height: calc(100vh - 94.75px);  
+}
+
+
+.min-height {
+  min-height: calc(100vh - 94.75px);
 }
