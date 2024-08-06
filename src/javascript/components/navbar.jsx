@@ -7,6 +7,10 @@ import '../../styles/navbar.css';
 import brand from '../../img/home.png'
 
 const PortofolioNavbar = () => {
+    const handleContactMe = () => {
+        window.location.href = 'mailto:blondymm97@gmail.com?subject=Contact%20Request&body=Hello,%0D%0A%0D%0A';
+    };
+    
     return (
         <>
             <Navbar collapseOnSelect expand='lg' variant="dark" className="bg-body-tertiary fixed-top bg-transparent blur">
@@ -24,7 +28,7 @@ const PortofolioNavbar = () => {
                             <Nav.Link as={Link} to="/about" className="text-white">About Me</Nav.Link>
                             <Nav.Link as={Link} to="/projects" className="text-white">Projects</Nav.Link>
                             <Nav.Link as={Link} to="/resume" className="text-white">Resume</Nav.Link>
-                            <Nav.Link as={Link} to="/contact-me" className="text-white">Contact Me</Nav.Link>
+                            <Nav.Link onClick={handleContactMe} className="text-white">Contact Me</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
