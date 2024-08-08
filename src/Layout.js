@@ -6,6 +6,7 @@ import About from './javascript/views/about';
 import React from 'react';
 import Resume from './javascript/views/resume';
 import Projects from './javascript/views/projects';
+import Boids from './javascript/views/boids';
 
 const Layout = () => { 
     return (
@@ -13,12 +14,13 @@ const Layout = () => {
             <BrowserRouter>
                 <PortofolioNavbar />
                 <ThreeScene></ThreeScene>
-                <div className='content max-height bg-transparent mt-nav p-0'>
+                <div className='content height max-height bg-transparent mt-nav p-0'>
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<About />} path="/about" />
                         <Route element={<Resume />} path="/resume" />
                         <Route element={<Projects />} path="/projects" />
+                        <Route element={<Boids />} path="/projects/boid-simulation" />
                     </Routes>
                 </div>
             </BrowserRouter>
