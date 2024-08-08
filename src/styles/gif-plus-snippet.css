@@ -1,0 +1,24 @@
+.small-code {
+    line-height: 1.2;  
+    padding: 0.5rem;
+    font-size: 0.65rem;
+}
+
+.hljs {
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+.gif {
+    width: 15rem;
+}
+
+
+@media screen and (min-width: 1921px) {
+    .gif  {
+        width: 25rem;
+    }
+
+    .small-code {
+        font-size: 0.75rem;
+    }
+}
