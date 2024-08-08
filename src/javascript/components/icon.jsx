@@ -20,7 +20,7 @@ import { ReactComponent as BOOTSTRAP } from '../../svg/bootstrap-4.svg';
 
 import "../../styles/skill.css"
 
-const SVGIcon = ({ iconName }) => {
+const SVGIcon = ({ iconName, classes }) => {
     const svgMap = {
         cs: CS,
         cpp: CPP,
@@ -44,7 +44,7 @@ const SVGIcon = ({ iconName }) => {
     
     const IconComponent = svgMap[iconName];
   
-    if (IconComponent) return <IconComponent className='svg-icon' />;
+    if (IconComponent) return <IconComponent className={`svg-icon ${classes}`} />;
   };
   
   export default SVGIcon;
