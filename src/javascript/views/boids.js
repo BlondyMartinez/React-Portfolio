@@ -15,6 +15,7 @@ import uiss from '../../videos/boids/UI.png'
 import Feature from "../components/feature";
 import ImageZoom from "../components/image-zoom.jsx";
 import useScreenWidth from "../hooks/useScreenWidth.jsx";
+import FancyButton from "../components/button.jsx";
 
 const codeSnippet = {
     alignment:
@@ -261,8 +262,13 @@ function Boids() {
             <Row className="my-4 light-blue-text">
                 <Col>
                     <h1 className="text-center">Unreal Boid Simulation</h1>
-                    <SVGIcon iconName={'cpp'} />
-                    <SVGIcon iconName={'ue'} classes={'ps-3'} />
+                    <div className="d-flex justify-content-between">
+                        <div>
+                            <SVGIcon iconName={'cpp'} />
+                            <SVGIcon iconName={'ue'} classes={'ps-3'} />
+                        </div>
+                        <FancyButton className="float-end" text={smallDevice ? '' : 'Repository'} icon={'mingcute:github-line'} handleClick={() => window.open('https://github.com/BlondyMartinez/Boids', '_blank')} />
+                    </div>
                     <p>This project simulates the flocking behavior using Unreal Engine, allowing interactive adjustments to observe the effects on flocking dynamics.</p>
                     <p className="text-white"><strong className="orange-text">Note:</strong> This project was created using Unreal Engine 5.3.2. Opening it in a different version may cause compatibility issues and could potentially break the simulation.</p>
                 </Col>
