@@ -11,7 +11,7 @@ function About() {
             <div className="about-content d-flex flex-column mb-3">
                 <h1 className="light-blue-text fw-800 glow">About Me</h1>
                 <div className="card">
-                    <span className="p-3 text-white">Hello! I'm a <span className="orange-text fw-800">versatile</span> full-stack developer with a background in <span className="orange-text fw-800">computer games programming</span>. 
+                    <span className="p-3 text-white fs-5">Hello! I'm a <span className="orange-text fw-800">versatile</span> full-stack developer with a background in <span className="orange-text fw-800">computer games programming</span>. 
                         Proficient in both <span className="orange-text fw-800">front-end</span> and <span className="orange-text fw-800">back-end</span> development, I also have experience in <span className="orange-text fw-800">testing</span> and design software. 
                         <br></br><br></br>
                         I'm eager to use my skills to turn your ideas into reality!
