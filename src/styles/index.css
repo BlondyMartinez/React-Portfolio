@@ -47,7 +47,10 @@ code {
   height: calc(100vh - 94.75px);  
 }
 
-
 .min-height {
   min-height: calc(100vh - 94.75px);
+}
+
+.radius-20 {
+  border-radius: 20px;
 }
