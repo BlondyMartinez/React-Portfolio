@@ -14,6 +14,7 @@ import blueprints from '../../videos/boids/blueprints.png';
 import uiss from '../../videos/boids/UI.png'
 import Feature from "../components/feature";
 import ImageZoom from "../components/image-zoom.jsx";
+import useScreenWidth from "../hooks/useScreenWidth.jsx";
 
 const codeSnippet = {
     alignment:
@@ -253,8 +254,10 @@ void ABoid::GetNearbyEntities()
 }
 
 function Boids() {
+    const smallDevice = useScreenWidth();
+
     return (
-        <div className="card m-5">
+        <div className={`card ${smallDevice ? 'my-5 p-2' : 'm-5'}`}>
             <Row className="my-4 light-blue-text">
                 <Col>
                     <h1 className="text-center">Unreal Boid Simulation</h1>
@@ -350,7 +353,7 @@ function Boids() {
                                     and containment, which keeps boids within certain boundaries. This feature enables you to experiment with different scenarios and observe how small changes can drastically alter flocking dynamics.
                                 </p>
                                 <Row>
-                                    <Col className="d-flex justify-content-between">
+                                    <Col className={`d-flex ${smallDevice ? 'flex-column' : 'justify-content-between'}`}>
                                         <ImageZoom src={uiss} />
                                         <ImageZoom src={blueprints} />
                                     </Col>

@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/image-zoom.css'; 
+import useScreenWidth from '../hooks/useScreenWidth';
 
 const ImageZoom = ({ src }) => {
     const [showModal, setShowModal] = useState(false);
+    const smallDevice = useScreenWidth();
 
-    const handleShow = () => setShowModal(true);
+    const handleShow = () => { if(!smallDevice) setShowModal(true) };
     const handleClose = () => setShowModal(false);
 
     return (

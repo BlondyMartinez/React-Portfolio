@@ -1,5 +1,5 @@
 .thumbnail {
-    max-width: 400px; 
+    width: 100%; 
     border-radius: 8px; 
     transition: transform 0.3s ease; 
 }
@@ -17,3 +17,10 @@
     max-height: 90vh;
     object-fit: contain; 
 }
+
+@media screen and (min-width: 1280px) {
+    .thumbnail {
+        max-width: 400px;
+    }
+}
+
