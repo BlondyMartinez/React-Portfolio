@@ -359,9 +359,9 @@ function Boids() {
                                     and containment, which keeps boids within certain boundaries. This feature enables you to experiment with different scenarios and observe how small changes can drastically alter flocking dynamics.
                                 </p>
                                 <Row>
-                                    <Col className={`d-flex ${smallDevice ? 'flex-column' : 'justify-content-between'}`}>
-                                        <ImageZoom src={uiss} />
-                                        <ImageZoom src={blueprints} />
+                                    <Col className={`d-flex gap-3 ${smallDevice ? 'flex-column' : 'justify-content-between'}`}>
+                                        <ImageZoom src={uiss} label={'UI'} />
+                                        <ImageZoom src={blueprints} label={'Blueprints'} />
                                     </Col>
                                 </Row>
                             </Col>

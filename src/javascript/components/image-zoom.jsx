@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, Badge } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/image-zoom.css'; 
 import useScreenWidth from '../hooks/useScreenWidth';
 
-const ImageZoom = ({ src }) => {
+const ImageZoom = ({ src, label }) => {
     const [showModal, setShowModal] = useState(false);
     const smallDevice = useScreenWidth();
 
@@ -13,12 +13,23 @@ const ImageZoom = ({ src }) => {
 
     return (
         <>
-            <img
-                src={src}
-                className="thumbnail"
-                onClick={handleShow}
-                style={{ cursor: 'pointer' }}
-            />
+            <div className="position-relative d-inline-block">
+                <img
+                    src={src}
+                    className="thumbnail"
+                    onClick={handleShow}
+                    style={{ cursor: 'pointer' }}
+                />
+                {label && (
+                    <Badge 
+                        bg="dark" 
+                        className="position-absolute top-0 start-0 m-2 text-white"
+                    >
+                        {label}
+                    </Badge>
+                )}
+            </div>
+
             <Modal
                 show={showModal}
                 onHide={handleClose}
