@@ -19,7 +19,7 @@ import { ReactComponent as POSTGRESQL } from '../../svg/postgresql-svgrepo-com.s
 import { ReactComponent as BOOTSTRAP } from '../../svg/bootstrap-4.svg';
 import { ReactComponent as SASS } from '../../svg/sass-1.svg';
 import { ReactComponent as FLUX } from '../../svg/flux.svg';
-import { ReactComponent as RRD } from '../../svg/flux.svg';
+import { ReactComponent as RRD } from '../../svg/react-router-svgrepo-com.svg';
 
 import "../../styles/skill.css"
 
