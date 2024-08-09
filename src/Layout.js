@@ -9,6 +9,7 @@ import Projects from './javascript/views/projects';
 import Boids from './javascript/views/boids';
 import ConnectFour from './javascript/views/connectfour';
 import StarWars from './javascript/views/starwars';
+import TaskItApp from './javascript/views/taskitapp';
 
 const Layout = () => { 
     return (
@@ -25,6 +26,7 @@ const Layout = () => {
                         <Route element={<Boids />} path="/projects/boid-simulation" />
                         <Route element={<ConnectFour />} path="/projects/connect-four" />
                         <Route element={<StarWars />} path="/projects/starwars-wiki" />
+                        <Route element={<TaskItApp />} path="/projects/task-it-app" />
                     </Routes>
                 </div>
             </BrowserRouter>
