@@ -8,6 +8,7 @@ import Resume from './javascript/views/resume';
 import Projects from './javascript/views/projects';
 import Boids from './javascript/views/boids';
 import ConnectFour from './javascript/views/connectfour';
+import StarWars from './javascript/views/starwars';
 
 const Layout = () => { 
     return (
@@ -23,6 +24,7 @@ const Layout = () => {
                         <Route element={<Projects />} path="/projects" />
                         <Route element={<Boids />} path="/projects/boid-simulation" />
                         <Route element={<ConnectFour />} path="/projects/connect-four" />
+                        <Route element={<StarWars />} path="/projects/starwars-wiki" />
                     </Routes>
                 </div>
             </BrowserRouter>
