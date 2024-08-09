@@ -20,7 +20,7 @@
 
 @media screen and (min-width: 1280px) {
     .thumbnail {
-        max-width: 400px;
+        max-height: 400px;
     }
 }
 
