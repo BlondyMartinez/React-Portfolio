@@ -17,6 +17,9 @@ import { ReactComponent as UE } from '../../svg/Unreal Engine.svg';
 import { ReactComponent as REACT } from '../../svg/react-2.svg';
 import { ReactComponent as POSTGRESQL } from '../../svg/postgresql-svgrepo-com.svg';
 import { ReactComponent as BOOTSTRAP } from '../../svg/bootstrap-4.svg';
+import { ReactComponent as SASS } from '../../svg/sass-1.svg';
+import { ReactComponent as FLUX } from '../../svg/flux.svg';
+import { ReactComponent as RRD } from '../../svg/flux.svg';
 
 import "../../styles/skill.css"
 
@@ -40,6 +43,9 @@ const SVGIcon = ({ iconName, classes }) => {
         react: REACT,
         postgresql: POSTGRESQL,
         bootstrap: BOOTSTRAP,
+        sass: SASS,
+        flux: FLUX,
+        rrd: RRD,
     };
     
     const IconComponent = svgMap[iconName];
