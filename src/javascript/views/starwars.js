@@ -3,7 +3,6 @@ import { Row, Col } from 'react-bootstrap';
 import SVGIcon from "../components/icon";
 import useScreenWidth from "../hooks/useScreenWidth.jsx";
 import FancyButton from "../components/button.jsx";
-import CodeHighlighter from "../components/code-highlighter.jsx";
 import SWImg from '../../img/sw-phone.png'
 
 const codeSnippet = {
