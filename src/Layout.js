@@ -7,6 +7,7 @@ import React from 'react';
 import Resume from './javascript/views/resume';
 import Projects from './javascript/views/projects';
 import Boids from './javascript/views/boids';
+import ConnectFour from './javascript/views/connectfour';
 
 const Layout = () => { 
     return (
@@ -21,6 +22,7 @@ const Layout = () => {
                         <Route element={<Resume />} path="/resume" />
                         <Route element={<Projects />} path="/projects" />
                         <Route element={<Boids />} path="/projects/boid-simulation" />
+                        <Route element={<ConnectFour />} path="/projects/connect-four" />
                     </Routes>
                 </div>
             </BrowserRouter>
