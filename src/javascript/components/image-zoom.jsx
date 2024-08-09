@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/image-zoom.css'; 
 import useScreenWidth from '../hooks/useScreenWidth';
