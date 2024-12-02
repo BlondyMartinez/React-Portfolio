@@ -1,4 +1,4 @@
-<h1>Task It App</h1>
+<h1>Portfolio</h1>
 Welcome to my portfolio repository! This project showcases my work and skills, built with modern web technologies. Below you'll find an overview of the tech stack used and instructions on how to get started with the project.
 
 <h2>Features</h2>
